@@ -58,9 +58,13 @@ install(
 install(
     TARGETS
         message_transforms_node
-        message_transforms_parameters
         DESTINATION
         lib/message_transforms
+)
+
+install (
+    TARGETS message_transforms_parameters
+    EXPORT message_transforms_parameters_export
 )
 
 install(DIRECTORY launch DESTINATION share/message_transforms)
